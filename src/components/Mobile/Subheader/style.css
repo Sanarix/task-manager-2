@@ -1,0 +1,13 @@
+#mobile-subheader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mobile-subheader-tab {
+
+}
+
+.mobile-subheader-tab_active {
+
+}
