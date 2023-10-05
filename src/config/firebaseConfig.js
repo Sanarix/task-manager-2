@@ -4,7 +4,8 @@ const firebaseConfig = {
   projectId: "task-manager-2-38b3e",
   storageBucket: "task-manager-2-38b3e.appspot.com",
   messagingSenderId: "678291204532",
-  appId: "1:678291204532:web:e86e372ce6446d5a8ceae1"
+  appId: "1:678291204532:web:e86e372ce6446d5a8ceae1",
+  databaseURL: "https://task-manager-2-38b3e-default-rtdb.europe-west1.firebasedatabase.app/"
 };
 
 export default firebaseConfig;

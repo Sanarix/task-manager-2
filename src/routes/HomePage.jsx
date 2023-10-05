@@ -1,14 +1,11 @@
-import Header from "../components/Combined/Header/Header";
-import Authorized from '../hoc/Authorized';
-import AsideMenu from '../components/Combined/AsideMenu/AsideMenu';
+import './styles/HomePage.css';
 
-export default function  HomePage() {
-	const AsideMenuWithAuthorized = Authorized(AsideMenu);
+export default function HomePage() {
+	
+
 	return (
 		<>
-			<Header />
-			<AsideMenuWithAuthorized />
-			Стартовая страница
+				
 		</>
 	)
 }

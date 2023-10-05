@@ -1,4 +1,4 @@
-export default function Authorized(Component, isAuth = true) {
+export default function Authorized(Component, isAuth) {
 	return function() {
 		return (
 			<>

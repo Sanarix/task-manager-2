@@ -1,0 +1,39 @@
+#login-form {
+	border: 1px solid grey;
+	padding: 1%;
+	display: flex;
+	align-items: space-around;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.form-input {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	margin-bottom: 2%;
+	padding: 2%;
+	border: 1px solid black;
+}
+
+.form-input input {
+	border: none;
+	background-color: inherit;
+	width: 100%;
+	font-size: 1.4em;
+	outline: none;
+}
+
+.login-form-btn {
+	width: 50%;
+	padding: 1%;
+	font-size: 1em;
+}
+
+.password-control {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
