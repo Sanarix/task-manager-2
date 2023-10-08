@@ -1,7 +1,7 @@
 import './styles/Login.css';
 import images from '../assets/images';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 //Компонент отвечающий за показ/скрытие пароля
@@ -29,6 +29,7 @@ function PasswordControl() {
 
 export default function Login() {
 	const navigate = useNavigate();
+	const {state} = useLocation()
 
 	const auth = getAuth();
 	const [email, setEmail] = useState('');
@@ -39,10 +40,10 @@ export default function Login() {
 		navigate('/registration');
 	}
 
-	function logIn(e, auth, email, password) {
+	async function logIn(e, auth, email, password) {
 		e.preventDefault();
-		signInWithEmailAndPassword(auth, email, password);
-		navigate('/');
+		await signInWithEmailAndPassword(auth, email, password);
+		navigate(state?.path || '/');
 	}
 
 	return (

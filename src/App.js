@@ -24,6 +24,7 @@ function App() {
 
 				<button onClick={() => setShow(true)}>Показать</button>
 				<button onClick={() => setShow(false)}>Скрыть</button>
+				
 				{show &&
 					<h1>Да не упадёт приложение твое!</h1>
 				}

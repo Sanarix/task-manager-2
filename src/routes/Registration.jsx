@@ -8,13 +8,15 @@ import { useState } from 'react';
 import { redirect } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-function register(event, email, password, repeatedPassword, navigate) {
+async function register(event, email, password, repeatedPassword, navigate) {
 	event.preventDefault();
 
+	//При двукратно верном вводе паролей...
 	if(password === repeatedPassword) {
 
 		const auth = getAuth();
-		createUserWithEmailAndPassword(auth, email, password)
+
+		await createUserWithEmailAndPassword(auth, email, password)
 		.then((userCredential) => {
 			const user = userCredential.user;
 			autoLogin(auth, email, password);
