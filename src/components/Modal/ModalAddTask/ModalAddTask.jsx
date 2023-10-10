@@ -1,6 +1,6 @@
 import './style.css';
 
-export default function ModalAddTask({openModal}) {
+export default function ModalAddTask() {
 	return(
 		<>
 		<h2 className="modal-header">Создание задачи</h2>
@@ -16,8 +16,7 @@ export default function ModalAddTask({openModal}) {
 			</textarea>
 			<button 
 				type="button"
-				className="modal-button"
-				onClick={() => {openModal(false)}}
+				className=" modal-close modal-button "
 			>
 					Создать задачу
 			</button>
