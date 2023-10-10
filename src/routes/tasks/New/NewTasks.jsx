@@ -8,6 +8,9 @@ export default function NewTasks({openModal}) {
 				<h2>Новые задачи</h2>
 				<button onClick={() => openModal(true)}>Добавить задачу</button>
 			</header>
+			<main id="new-tasks-field">
+				
+			</main>
 		</>
 	)
 }
