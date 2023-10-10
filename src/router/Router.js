@@ -5,7 +5,7 @@ import Registration from '../routes/Registration';
 import NewTask from '../routes/tasks/New/NewTasks';
 import RequiredAuth from "../hoc/RequiredAuth";
 
-export default function Router() {
+export default function Router({openModal}) {
 	return (
 		<Routes>
 			<Route path="/" element={<HomePage />} />
@@ -13,7 +13,7 @@ export default function Router() {
 			<Route path="registration" element={<Registration />}/>
 			<Route 
 				path="/new" 
-				element={<RequiredAuth><NewTask /></RequiredAuth>}/>
+				element={<RequiredAuth><NewTask openModal={openModal}/></RequiredAuth>}/>
 		</Routes>
 	)
 }

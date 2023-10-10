@@ -1,11 +1,12 @@
 import './style.css'
 
-export default function NewTasks() {
+export default function NewTasks({openModal}) {
+
 	return (
 		<>
 			<header id="new-tasks-header">
 				<h2>Новые задачи</h2>
-				<button>Добавить задачу</button>
+				<button onClick={() => openModal(true)}>Добавить задачу</button>
 			</header>
 		</>
 	)
